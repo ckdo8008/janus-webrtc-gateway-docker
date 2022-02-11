@@ -151,7 +151,7 @@ RUN FFMPEG_VER="n4.2.1" && cd ~/ffmpeg_sources && \
 # nginx-rtmp with openresty
 RUN ZLIB="zlib-1.2.11" && vNGRTMP="v1.1.11" && PCRE="8.41" && nginx_build=/root/nginx && mkdir $nginx_build && \
     cd $nginx_build && \
-    wget https://ftp.pcre.org/pub/pcre/pcre-$PCRE.tar.gz && \
+    wget https://github.com/jaapiyo/pcre/raw/main/pcre-8.41.tar.gz && \
     tar -zxf pcre-$PCRE.tar.gz && \
     cd pcre-$PCRE && \
     ./configure && make && make install && \
